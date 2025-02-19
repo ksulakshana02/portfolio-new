@@ -255,27 +255,12 @@ body {
 .project-reverse {
   display: flex;
   flex-direction: column;
-  /* Changed from grid to column layout */
   gap: 50px;
   padding: 20px 15px;
   background-color: var(--white);
   border-radius: 25px;
   box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.2);
 }
-
-/* .project {
-  grid-template-columns: 1.3fr 1fr;
-}
-
-.project-reverse {
-  grid-template-columns: 1fr 1.3fr;
-} */
-
-/* .project,
-.project-reverse {
-  border-radius: 25px;
-  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.2);
-} */
 
 .project-text {
   display: flex;
@@ -318,12 +303,6 @@ body {
   display: flex;
   gap: 60px;
 }
-
-/* .multi-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-} */
 
 .project-links a {
   text-decoration: none;
@@ -441,7 +420,6 @@ body {
   }
 
   .hero-overall img {
-    /* max-width: 400px; */
     width: 70%;
     height: auto;
   }
