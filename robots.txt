@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kaveesha-sulakshana.vercel.app/sitemap.xml
