@@ -392,6 +392,174 @@ body {
   color: var(--red);
 }
 
+
+/*blog page */
+
+.blog-section, .blog-post-section {
+    padding: 150px 0 100px; /* Top padding accounts for fixed navbar */
+    background-color: var(--darkwhite);
+    min-height: 100vh;
+}
+
+.blog-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.blog-header h3 {
+    color: var(--red);
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.blog-header h1 {
+    font-size: 35px;
+}
+
+/* Grid Layout */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+}
+
+/* Blog Card - Using your existing card styles */
+.blog-card {
+    background-color: var(--white);
+    border-radius: 25px;
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.1);
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+}
+
+.blog-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: var(--lightgray);
+    font-weight: 600;
+}
+
+.blog-category {
+    color: var(--red);
+    text-transform: uppercase;
+}
+
+.blog-title-link {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.blog-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    transition: color 0.3s;
+}
+
+.blog-card h3:hover {
+    color: var(--red);
+}
+
+.blog-summary {
+    color: var(--lightgray);
+    line-height: 1.6;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+.read-more {
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 700;
+    font-size: 16px;
+    transition: color 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.read-more:hover {
+    color: var(--red);
+}
+
+/*blog inner*/
+
+.blog-post-section {
+    background-color: var(--white);
+}
+
+.blog-post-container {
+    max-width: 900px !important; /* Narrower for better readability */
+}
+
+.back-link {
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+    transition: color 0.3s;
+}
+
+.back-link:hover {
+    color: var(--red);
+}
+
+.post-header {
+    margin-bottom: 40px;
+}
+
+.post-category {
+    background-color: rgba(255, 4, 54, 0.1); /* Light red bg */
+    color: var(--red);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.post-header h1 {
+    font-size: 40px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.post-date {
+    color: var(--lightgray);
+    font-style: italic;
+}
+
+.post-body {
+    color: var(--gray);
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.post-body p {
+    margin-bottom: 25px;
+}
+
+.post-body h3 {
+    color: var(--black);
+    font-size: 26px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
 @media (max-width: 1300px) {
   .container {
     padding: 0 150px;
@@ -494,4 +662,55 @@ body {
   .footer {
     text-align: center;
   }
+}
+
+@media (max-width: 768px) {
+    .blog-header h1 {
+        font-size: 28px;
+    }
+
+    .post-header h1 {
+        font-size: 30px;
+    }
+
+    .blog-card {
+        padding: 25px;
+    }
+
+    .blog-section, .blog-post-section {
+        padding: 120px 0 60px;
+    }
+}
+
+@media (max-width: 500px) {
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh; /* Takes up vertical space so footer stays down */
+    width: 100%;
+    padding-top: 100px;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid var(--superlightgray); /* Light gray background ring */
+    border-top: 5px solid var(--red);       /* Red spinning part */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }

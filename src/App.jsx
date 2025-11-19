@@ -1,19 +1,24 @@
 import './App.css'
-import About from './components/About';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
-import Hero from './components/Hero';
 import Navbar from './components/Navbar'
-import Portfolio from './components/Portfolio';
+import {Route, Routes} from "react-router-dom";
+import Blog from "./components/Blog.jsx";
+import BlogPost from "./components/BlogPost.jsx";
+import Home from "./components/Home.jsx";
 
 function App() {
   return (
     <>
       <Navbar />
-      <Hero />
-      <About />
-      <Portfolio />
-      <Contact />
+      {/*<Hero />*/}
+      {/*<About />*/}
+      {/*<Portfolio />*/}
+      {/*<Contact />*/}
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
+        </Routes>
       <Footer />
     </>
   );
