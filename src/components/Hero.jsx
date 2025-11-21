@@ -11,7 +11,7 @@ const Hero = () => {
                             <h1>
                                 Full-stack / Web <br /> Developer{" "}
                                 <span>
-                                    <img src="assets/wave hand.png" alt="hand" loading="lazy" />
+                                    <img src="/assets/wave hand.png" alt="hand" loading="lazy" />
                                 </span>
                             </h1>
                             <p>

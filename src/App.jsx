@@ -5,6 +5,7 @@ import {Route, Routes} from "react-router-dom";
 import Blog from "./components/Blog.jsx";
 import BlogPost from "./components/BlogPost.jsx";
 import Home from "./components/Home.jsx";
+import ChatBot from "./components/ChatBot.jsx";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
         </Routes>
+        <ChatBot/>
       <Footer />
     </>
   );
